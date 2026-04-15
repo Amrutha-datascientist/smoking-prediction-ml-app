@@ -24,19 +24,37 @@ st.info("""
 # =========================
 st.header("👤 Basic Information")
 
-age = st.number_input("Age")
-weight = st.number_input("Weight (kg)")
-waist = st.number_input("Waist (cm)")
+age = st.number_input("Age", min_value=1, max_value=100, step=1)
+
+weight = st.number_input("Weight (kg)", min_value=20, max_value=150, step=1)
+
+waist = st.number_input("Waist (cm)", min_value=40, max_value=150, step=1)
 
 # =========================
 # 🩸 GROUP 2: BLOOD TEST
 # =========================
 st.header("🩸 Blood Test Results")
 
-gtp = st.number_input("GTP Level")
-alt = st.number_input("ALT Level")
-ast = st.number_input("AST Level")
-hemoglobin = st.number_input("Hemoglobin")
+ast = st.number_input(
+    "AST",
+    value=20.0,
+    step=0.1,
+    help="Liver enzyme level (normal range ~10–40 U/L)"
+)
+
+alt = st.number_input(
+    "ALT",
+    value=20.0,
+    step=0.1,
+    help="Liver enzyme level (normal range ~7–56 U/L)"
+)
+
+gtp = st.number_input(
+    "GTP",
+    value=20.0,
+    step=0.1,
+    help="Gamma-GTP enzyme (high values may indicate alcohol/smoking impact)"
+)
 
 # =========================
 # 🦷 GROUP 3: ORAL HEALTH

@@ -55,7 +55,7 @@ gtp = st.number_input(
     step=0.1,
     help="Gamma-GTP enzyme (high values may indicate alcohol/smoking impact)"
 )
-
+hemoglobin = st.number_input("Hemoglobin", value=14.0, step=0.1)
 # =========================
 # 🦷 GROUP 3: ORAL HEALTH
 # =========================

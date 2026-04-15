@@ -3,7 +3,11 @@ import numpy as np
 import pickle
 
 # Load model
-model = pickle.load(open("model.pkl", "rb"))
+import os
+import pickle
+
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
+model = pickle.load(open(MODEL_PATH, "rb"))
 
 st.title("🚬 Smoking Prediction App")
 

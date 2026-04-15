@@ -7,7 +7,7 @@ import os
 import pickle
 
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
-pickle.dump(model, open("model.pkl", "wb"))
+model = pickle.load(open(MODEL_PATH, "rb"))
 
 st.title("🚬 Smoking Prediction App")
 

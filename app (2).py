@@ -1,11 +1,9 @@
 import streamlit as st
 import numpy as np
 import pickle
+import os
 
 # Load model
-import os
-import pickle
-
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 model = pickle.load(open(MODEL_PATH, "rb"))
 
@@ -19,6 +17,7 @@ st.info("""
 🎓 Role: Data Science / ML Engineer  
 📊 Project: Smoking Prediction using Machine Learning  
 """)
+
 # =========================
 # 👤 GROUP 1: BASIC INFO
 # =========================
@@ -55,7 +54,9 @@ gtp = st.number_input(
     step=0.1,
     help="Gamma-GTP enzyme (high values may indicate alcohol/smoking impact)"
 )
+
 hemoglobin = st.number_input("Hemoglobin", value=14.0, step=0.1)
+
 # =========================
 # 🦷 GROUP 3: ORAL HEALTH
 # =========================
@@ -71,7 +72,7 @@ oral = st.selectbox("Oral Condition", ["Normal", "Bad"])
 oral = 1 if oral == "Bad" else 0
 
 # =========================
-# 📦 INPUT ARRAY (IMPORTANT ORDER)
+# 📦 INPUT ARRAY
 # =========================
 input_data = np.array([[
     age,

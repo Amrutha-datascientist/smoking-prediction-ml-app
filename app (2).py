@@ -3,6 +3,16 @@ import numpy as np
 import pickle
 import os
 st.set_page_config(layout="wide")
+
+st.markdown("""
+    <style>
+        .block-container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            max-width: 100%;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # Load model
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 model = pickle.load(open(MODEL_PATH, "rb"))

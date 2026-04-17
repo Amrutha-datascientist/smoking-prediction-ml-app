@@ -5,9 +5,7 @@ import pickle
 # Load model
 import os
 import pickle
-st.set_page_config(layout="wide")
 
-st.image("https://raw.githubusercontent.com/Amrutha-DS/smoking-prediction-ml-app/main/Smoking.png")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 model = pickle.load(open(MODEL_PATH, "rb"))
 

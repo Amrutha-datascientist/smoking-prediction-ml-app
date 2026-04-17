@@ -27,7 +27,7 @@ age = st.number_input("Age", min_value=1, max_value=100, step=1)
 
 weight = st.number_input("Weight (kg)", min_value=20, max_value=150, step=1)
 
-waist = st.number_input("Waist (cm)", min_value=40, max_value=150, step=1)
+waist = st.number_input("Waist (cm)", min_value=20, max_value=150, step=1)
 
 # =========================
 # 🩸 GROUP 2: BLOOD TEST
